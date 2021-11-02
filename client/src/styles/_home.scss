@@ -1,0 +1,48 @@
+.home {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(240, 240, 240);
+
+  &__title {
+    font-size: 6rem;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+  }
+
+  &__description {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &__second-description {
+    font-size: 2.5rem;
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  }
+
+  &__waves-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__waves-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+}

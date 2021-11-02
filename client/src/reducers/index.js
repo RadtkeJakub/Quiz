@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
-import questions from "./questions";
+import quiz from "./quiz";
 import user from "./user";
 
 const reducers = combineReducers({
-  questions,
+  quiz,
   user,
 });
 

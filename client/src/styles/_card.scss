@@ -1,0 +1,76 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 37rem;
+  height: 57rem;
+  background-color: rgb(240, 240, 240);
+  border-radius: 25px;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  margin: 5rem;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2%);
+    transition: box-shadow 0.3s;
+  }
+
+  &--user {
+    background: linear-gradient(rgb(238, 196, 196), rgb(241, 199, 129));
+  }
+
+  &__icon {
+    font-size: 12rem;
+    margin-bottom: 3rem;
+  }
+
+  &__name {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: inherit;
+    padding: 3rem;
+  }
+
+  &-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    z-index: -1;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-size: 4rem;
+    color: $color-secondary;
+    cursor: pointer;
+  }
+}

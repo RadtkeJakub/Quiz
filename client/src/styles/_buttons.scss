@@ -1,0 +1,59 @@
+.button {
+  background-color: $color-main;
+  color: $color-white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background-color: darken($color-main, 10%);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s,
+      box-shadow 0.3s;
+  }
+
+  &--reverse {
+    color: $color-main;
+    background-color: $color-white;
+
+    &:hover {
+      background-color: $color-main;
+      color: $color-white;
+      transform-origin: left;
+      transition: background-color 0.3s ease-in, color 0.3s;
+    }
+  }
+
+  &--dark {
+    color: $color-white;
+    background-color: $color-secondary;
+
+    &:hover {
+      background-color: darken($color-secondary, 10%);
+    }
+  }
+
+  &--login {
+    width: 70%;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 2rem 2rem;
+
+    &:first-child {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &--lift {
+    &:hover {
+      box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3);
+      transform: translateY(-10%);
+    }
+  }
+}

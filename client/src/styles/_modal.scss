@@ -1,0 +1,29 @@
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    background-color: $color-white;
+    font-size: 2rem;
+    padding: 4rem 2rem 3rem 2rem;
+    border-radius: 15px;
+    color: black;
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+}

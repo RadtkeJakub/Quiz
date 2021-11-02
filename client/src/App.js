@@ -1,28 +1,22 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import {
-  currentCategory,
-  setAmount,
-  loadQuestions,
-  loadCategories,
-  setDifficulty,
-} from "./actions/questions";
+import { Switch, Route, useLocation } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute";
+import "./styles/app.scss";
+
+import Login from "./pages/Login";
+import Home from "./pages/Home";
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadCategories());
-  });
-
-  const setEverything = () => {
-    dispatch(currentCategory(10));
-    dispatch(setDifficulty("hard"));
-    dispatch(setAmount(10));
-    dispatch(loadQuestions());
-  };
+  const location = useLocation();
+  console.log(location);
   return (
     <div className="App">
-      <h1 onClick={setEverything}>App</h1>
+      <Switch>
+        <Route path="/" exact>
+          <Login />
+        </Route>
+        <ProtectedRoute path="/lobby" component={Home} />
+        <ProtectedRoute path="/quiz" component={Home} />
+      </Switch>
     </div>
   );
 }
